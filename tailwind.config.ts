@@ -16,7 +16,7 @@ export default {
           sm: '100%',
           md: '100%',
           lg: '100%',
-          xl: '1200px',
+          xl: '1400px',
         },
       },
       fontFamily: {
@@ -24,33 +24,35 @@ export default {
         mono: ['var(--font-geist-mono)', ...fontFamily.mono],
       },
       colors: {
-        // Main brownish colors
-        accent: '#6F4F1E', // Primary brown accent color
-        beige: '#F4E1C1', // Background color (light beige)
-        darkbrown: '#3E2A47', // Headline text color (dark brown)
-        mediumbrown: '#5C4033', // Body text color (medium brown)
-        mutedbrown: '#8B5E3C', // Link color (muted brown)
-        lightbrown: '#D1B2A1', // Border color (light brownish gray)
-        saddlebrown: '#8B4513', // Button hover color (saddle brown)
-        error: '#E74C3C', // Error color (crimson red)
-        success: '#27AE60', // Success color (emerald green)
+        primary: '#FF6F61', // Soft Coral (Primary Accent Color)
+        secondary: '#2F3A46', // Slate Gray (Text & Headings)
+        background: '#F5F5F5', // Off-White (Background Color)
+        cardBackground: '#E8E8E8', // Light Gray (Card Background)
+        hoverPrimary: '#FF8C72', // Light Coral (Button Hover)
+        border: '#D1D5DB', // Light Slate Gray (Borders)
+        link: '#5A6B8E', // Medium Slate Blue (Links)
+        textPrimary: '#333333', // Charcoal Gray (Text)
+        success: '#4CAF50', // Soft Green (Success Color)
+        error: '#E74C3C', // Soft Red (Error Color)
+        disabled: '#B0B0B0', // Light Gray (Disabled)
       },
       textColor: {
-        // Custom text colors
-        primary: '#5C4033', // Default body text color
-        heading: '#3E2A47', // Headline text color
-        link: '#8B5E3C', // Link text color
+        primary: '#333333', // Charcoal Gray (General Text)
+        secondary: '#2F3A46', // Slate Gray (Secondary Text)
+        link: '#5A6B8E', // Medium Slate Blue (Link Color)
       },
       backgroundColor: {
-        // Custom background colors
-        primary: '#F4E1C1', // Background color (light beige)
+        primary: '#F5F5F5', // Off-White (Background)
+        card: '#E8E8E8', // Light Gray (Card Background)
+        success: '#4CAF50', // Soft Green (Success Background)
+        error: '#E74C3C', // Soft Red (Error Background)
+        disabled: '#B0B0B0', // Light Gray (Disabled Background)
       },
       borderColor: {
-        // Custom border colors
-        primary: '#D1B2A1', // Border color (light brownish gray)
+        primary: '#D1D5DB', // Light Slate Gray (Borders)
       },
-      hover: {
-        primary: '#8B4513', // Hover state color for buttons (saddle brown)
+      boxShadow: {
+        primary: '0 4px 6px rgba(0, 0, 0, 0.1)', // Light shadow
       },
     },
   },

@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
-import { ConfigProvider } from 'antd';
-import { AntdRegistry } from '@ant-design/nextjs-registry';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -25,48 +23,30 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const theme = {
-    token: {
-      // Primary brown accent color
-      colorPrimary: '#6F4F1E',
-
-      // Background colors
-      colorBgBase: '#F4E1C1',
-      colorBgLayout: '#F4E1C1',
-      colorBgContainer: '#F4E1C1',
-
-      // Text colors
-      colorTextBase: '#5C4033',
-      colorTextHeading: '#3E2A47',
-
-      // Link colors
-      colorLink: '#8B5E3C',
-
-      // Border colors
-      colorBorder: '#D1B2A1',
-      colorBorderSecondary: '#D1B2A1',
-
-      // Button colors
-      colorBtnPrimary: '#6F4F1E',
-      colorBtnPrimaryHover: '#8B4513',
-
-      // Notification and feedback colors
-      colorError: '#E74C3C', // For error messages, icons, etc.
-      colorSuccess: '#27AE60', // For success messages
-
-      // Other UI elements
-      colorTextSecondary: '#8B5E3C', // Muted secondary text
-    },
-  };
+  // const theme = {
+  //   token: {
+  //     colorPrimary: '#FF6F61', // Primary accent color (Soft Coral)
+  //     colorLink: '#5A6B8E', // Link color (Medium Slate Blue)
+  //     colorSuccess: '#4CAF50', // Success color (Soft Green)
+  //     colorError: '#E74C3C', // Error color (Soft Red)
+  //     colorWarning: '#FF9800', // Warning color
+  //     colorTextBase: '#333333', // General text color (Charcoal Gray)
+  //     colorTextSecondary: '#2F3A46', // Secondary text color (Slate Gray)
+  //     colorBgBase: '#F5F5F5', // Background color (Off-White)
+  //     colorBgCard: '#E8E8E8', // Card background (Light Gray)
+  //     colorBorder: '#D1D5DB', // Border color (Light Slate Gray)
+  //     colorBtnPrimaryBg: '#FF6F61', // Button background (Soft Coral)
+  //     colorBtnPrimaryHoverBg: '#FF8C72', // Button hover color (Light Coral)
+  //     colorDisabled: '#B0B0B0', // Disabled color (Light Gray)
+  //   },
+  // };
 
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <AntdRegistry>
-          <ConfigProvider theme={theme}>{children}</ConfigProvider>
-        </AntdRegistry>
+        {children}
       </body>
     </html>
   );
